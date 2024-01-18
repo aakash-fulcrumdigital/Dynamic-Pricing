@@ -36,7 +36,7 @@ if st.button('Predict Price'):
 
     base_price = int(pipe.predict(output)[0])
     current_day_of_week = datetime.datetime.now().weekday()
-    if current_day_of_week == 2:  # wed
+    if current_day_of_week == 3:  # wed
         dynamic_price = int(base_price * 1.1)
     else:
         dynamic_price = base_price
