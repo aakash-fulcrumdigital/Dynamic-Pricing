@@ -3,9 +3,11 @@ import pickle
 import numpy as np
 import datetime
 import gdown
+import os
 
 # import the model
-gdown.download('https://drive.google.com/uc?id=18bXgJn2BJdlgTYEVAprIXxTl-GB1Gq5i', 'model.pkl', quiet=False)
+if not os.path.exists('model.pkl'):
+    gdown.download('https://drive.google.com/uc?id=18bXgJn2BJdlgTYEVAprIXxTl-GB1Gq5i', 'model.pkl', quiet=False)
 
 pipe = pickle.load(open('model.pkl','rb'))
 df = pickle.load(open('df.pkl','rb'))
