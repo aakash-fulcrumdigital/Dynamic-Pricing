@@ -46,4 +46,4 @@ if st.button('Predict Price'):
     else:
         dynamic_price = base_price
 
-    st.subheader("Flight Price : " + str(dynamic_price))
+    st.subheader("Dynamic Flight Price : " + str(dynamic_price))
