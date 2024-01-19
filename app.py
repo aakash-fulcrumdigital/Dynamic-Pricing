@@ -6,10 +6,17 @@ import gdown
 import os
 
 # import the model
-if not os.path.exists('model.pkl'):
-    gdown.download('https://drive.google.com/uc?id=18bXgJn2BJdlgTYEVAprIXxTl-GB1Gq5i', 'model.pkl', quiet=False)
+# if not os.path.exists('model.pkl'):
+#     gdown.download('https://drive.google.com/uc?id=18bXgJn2BJdlgTYEVAprIXxTl-GB1Gq5i', 'model.pkl', quiet=False)
+# pipe = pickle.load(open('model.pkl','rb'))
 
-pipe = pickle.load(open('model.pkl','rb'))
+if not os.path.exists('model_2lakh.pkl'):
+    gdown.download('https://drive.google.com/file/d/1xutoWAVvdPo7RIiMxoCNMZm2WpNydSjd', 'model_2lakh.pkl', quiet=False)
+pipe = pickle.load(open('model_2lakh.pkl','rb'))
+
+
+
+
 df = pickle.load(open('df.pkl','rb'))
 
 st.title("Dynamic Price Prediction for Flights")
@@ -46,4 +53,4 @@ if st.button('Predict Price'):
     else:
         dynamic_price = base_price
 
-    st.subheader("Dynamic Flight Price : " + str(dynamic_price))
+    st.subheader("Flight Price : " + str(dynamic_price))
