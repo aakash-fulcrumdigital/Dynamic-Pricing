@@ -11,7 +11,7 @@ import os
 # pipe = pickle.load(open('model.pkl','rb'))
 
 if not os.path.exists('model_2lakh.pkl'):
-    gdown.download('https://drive.google.com/file/d/1xutoWAVvdPo7RIiMxoCNMZm2WpNydSjd', 'model_2lakh.pkl', quiet=False)
+    gdown.download('https://drive.google.com/uc?id=1xutoWAVvdPo7RIiMxoCNMZm2WpNydSjd', 'model_2lakh.pkl', quiet=False)
 pipe = pickle.load(open('model_2lakh.pkl','rb'))
 
 
